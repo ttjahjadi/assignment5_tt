@@ -6,10 +6,6 @@ $('#submit-btn').click(function () {
     }
 })
 
-$(selector).change(function (e) { 
-    e.preventDefault();
-    
-});
 
 // var city $('#city-type').value();
 
