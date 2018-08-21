@@ -41,8 +41,10 @@ document.querySelector('#submit-btn').addEventListener('click', function () {
     var get = document.querySelector('#city-type');
     // This is to get the value of the string
     var cityGetValue = get.value;
+    // this is to remove extra spaces from the string value
+    var cityTrim = cityGetValue.trim();
     // This is to convert string to lower case
-    var city = cityGetValue.toLowerCase();
+    var city = cityTrim.toLowerCase();
     
     if( city === 'nyc' || city === 'new york city' || city === 'new york'){
         // jquery
