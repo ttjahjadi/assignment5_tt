@@ -32,6 +32,7 @@
 // var city $('#city-type').value();
 
 
+
 document.querySelector('#submit-btn').addEventListener('click', function () {
 
     // this is to prevent the default function of the button
@@ -48,6 +49,8 @@ document.querySelector('#submit-btn').addEventListener('click', function () {
         // $('body').css('background-image', 'url(images/nyc.jpg) ');
         // javascript
         document.querySelector('body').style.backgroundImage = 'url(images/nyc.jpg)';
+
+
     } else
     if( city === 'sf' || city === 'bay area' || city === 'san francisco'){
         // jquery
@@ -73,9 +76,10 @@ document.querySelector('#submit-btn').addEventListener('click', function () {
         // javascript
         document.querySelector('body').style.backgroundImage = 'url(images/sydney.jpg)';
     }
+        // to submit the form it is uneccesary for this situation
+        // document.querySelector("form").submit();
 
-    document.querySelector("#city-type").submit();
-    document.querySelector('#city-type').reset();
-
+        // to reset the whole form
+        document.querySelector('form').reset();
 
 })
