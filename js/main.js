@@ -29,27 +29,24 @@
 
 
 
-// var city $('#city-type').value();
-
-
-
-document.querySelector('#submit-btn').addEventListener('click', function () {
+document.querySelector('#city-type').addEventListener('keypress', function () {
 
     // this is to prevent the default function of the button
-    event.preventDefault();
+    // event.preventDefault();
 
     var get = document.querySelector('#city-type');
     // This is to get the value of the string
     var cityGetValue = get.value;
+    // this is to remove extra spaces from the string value
+    var cityTrim = cityGetValue.trim();
     // This is to convert string to lower case
-    var city = cityGetValue.toLowerCase();
+    var city = cityTrim.toLowerCase();
     
     if( city === 'nyc' || city === 'new york city' || city === 'new york'){
         // jquery
         // $('body').css('background-image', 'url(images/nyc.jpg) ');
         // javascript
         document.querySelector('body').style.backgroundImage = 'url(images/nyc.jpg)';
-
 
     } else
     if( city === 'sf' || city === 'bay area' || city === 'san francisco'){
@@ -75,11 +72,12 @@ document.querySelector('#submit-btn').addEventListener('click', function () {
         // $('body').css('background-image', 'url(images/sydney.jpg) ');
         // javascript
         document.querySelector('body').style.backgroundImage = 'url(images/sydney.jpg)';
-    }
+    } 
+
         // to submit the form it is uneccesary for this situation
         // document.querySelector("form").submit();
 
         // to reset the whole form
-        document.querySelector('form').reset();
+        // document.querySelector('form').reset();
 
 })
