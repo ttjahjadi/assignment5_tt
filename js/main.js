@@ -1,30 +1,81 @@
-$('#submit-btn').click(function () {
+// $('#submit-btn').click(function () {
     
-    event.preventDefault();
+//     event.preventDefault();
 
-    var city = $('#city-type').val();
+//     // var city = $('#city-type').val();
+
+//     var get = document.querySelector('#city-type')
+//     // This is to get the value of the string
+//     var cityGetValue = get.value
+//     // This is to convert string to lower case
+//     var city = cityGetValue.toLowerCase()
     
-    if( city === 'nyc' || city === 'NYC' || city === 'New York City' || city === 'new york city' || city === 'New York' || city === 'new york'){
-        $('body').css('background-image', 'url(images/nyc.jpg) ');
-    } else
-    if( city === 'SF' || city === 'sf' || city === 'Bay Area' || city === 'bay area' || city === 'San Francisco' || city === 'san francisco'){
-        $('body').css('background-image', 'url(images/sf.jpg) ');
-    } else
-    if( city === 'Los Angeles' || city === 'los angeles' || city === 'LA' || city === 'la' || city === 'LAX' || city === 'lax'){
-        $('body').css('background-image', 'url(images/la.jpg) ');
-    } else
-    if( city === 'Austin' || city === 'austin' || city === 'ATX' || city === 'atx'){
-        $('body').css('background-image', 'url(images/austin.jpg) ');
-    } else
-    if( city === 'Sydney' || city === 'sydney' || city === 'SYD' || city === 'syd'){
-        $('body').css('background-image', 'url(images/sydney.jpg) ');
-    }
-})
+//     if( city === 'nyc' || city === 'new york city' || city === 'new york'){
+//         $('body').css('background-image', 'url(images/nyc.jpg) ');
+//     } else
+//     if( city === 'sf' || city === 'bay area' || city === 'san francisco'){
+//         $('body').css('background-image', 'url(images/sf.jpg) ');
+//     } else
+//     if(city === 'los angeles' || city === 'la' || city === 'lax'){
+//         $('body').css('background-image', 'url(images/la.jpg) ');
+//     } else
+//     if(city === 'austin' || city === 'atx'){
+//         $('body').css('background-image', 'url(images/austin.jpg) ');
+//     } else
+//     if(city === 'sydney' || city === 'syd'){
+//         $('body').css('background-image', 'url(images/sydney.jpg) ');
+//     }
+// })
+
 
 
 // var city $('#city-type').value();
 
 
-// document.querySelector('#submit-btn').addEventListener('click', function () {
-//     event.preventDefault()
-// })
+document.querySelector('#submit-btn').addEventListener('click', function () {
+
+    // this is to prevent the default function of the button
+    event.preventDefault();
+
+    var get = document.querySelector('#city-type');
+    // This is to get the value of the string
+    var cityGetValue = get.value;
+    // This is to convert string to lower case
+    var city = cityGetValue.toLowerCase();
+    
+    if( city === 'nyc' || city === 'new york city' || city === 'new york'){
+        // jquery
+        // $('body').css('background-image', 'url(images/nyc.jpg) ');
+        // javascript
+        document.querySelector('body').style.backgroundImage = 'url(images/nyc.jpg)';
+    } else
+    if( city === 'sf' || city === 'bay area' || city === 'san francisco'){
+        // jquery
+        // $('body').css('background-image', 'url(images/sf.jpg) ');
+        // javascript
+        document.querySelector('body').style.backgroundImage = 'url(images/sf.jpg)'; 
+    } else
+    if(city === 'los angeles' || city === 'la' || city === 'lax'){
+        // jquery
+        // $('body').css('background-image', 'url(images/la.jpg) ');
+        // javascript
+        document.querySelector('body').style.backgroundImage = 'url(images/la.jpg)';
+    } else
+    if(city === 'austin' || city === 'atx'){
+        // jquery
+        // $('body').css('background-image', 'url(images/austin.jpg) ');
+        // javascript
+        document.querySelector('body').style.backgroundImage = 'url(images/austin.jpg)';
+    } else
+    if(city === 'sydney' || city === 'syd'){
+        // jquery
+        // $('body').css('background-image', 'url(images/sydney.jpg) ');
+        // javascript
+        document.querySelector('body').style.backgroundImage = 'url(images/sydney.jpg)';
+    }
+
+    document.querySelector("#city-type").submit();
+    document.querySelector('#city-type').reset();
+
+
+})
